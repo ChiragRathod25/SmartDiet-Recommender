@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diet Type Predictor</title>
+</head>
+<body>
+    <h1>Predict Diet Type</h1>
+    <form method="POST">
+        Age: <input type="number" name="age"><br><br>
+        Weight (kg): <input type="text" name="weight"><br><br>
+        Height (m): <input type="text" name="height"><br><br>
+        Gender: 
+        <select name="gender">
+            <option value="M">M</option>
+            <option value="F">F</option>
+        </select><br><br>
+        BMI: <input type="text" name="bmi"><br><br>
+        BMR: <input type="text" name="bmr"><br><br>
+        Activity Level: <input type="text" name="activity"><br><br>
+        Calories to Maintain Weight: <input type="text" name="calories"><br><br>
+        BMI Tags: <input type="number" name="bmi_tag"><br><br>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+        <h2>{{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
